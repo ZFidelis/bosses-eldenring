@@ -13,7 +13,7 @@ Esta API funciona como uma wiki, mostrando dados dos chefes do jogo, como locali
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnolog''ias Utilizadas
 
 - **Linguagem:** C# (.NET 8)
 - **Framework:** ASP.NET Core
@@ -21,4 +21,3 @@ Esta API funciona como uma wiki, mostrando dados dos chefes do jogo, como locali
 - **Banco de Dados:** MySQL
 - **Front-end:** JavaScript
 - **Versionamento:** Git + GitHub
-

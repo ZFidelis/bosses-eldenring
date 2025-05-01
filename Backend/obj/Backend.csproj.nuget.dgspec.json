@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\_ws\\202501\\AtividadeQuarta\\bosses-eldenring\\Backend\\Backend.csproj": {}
+    "C:\\_ws\\eldenring_trabalho\\bosses-eldenring\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\_ws\\202501\\AtividadeQuarta\\bosses-eldenring\\Backend\\Backend.csproj": {
+    "C:\\_ws\\eldenring_trabalho\\bosses-eldenring\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\_ws\\202501\\AtividadeQuarta\\bosses-eldenring\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\_ws\\eldenring_trabalho\\bosses-eldenring\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\_ws\\202501\\AtividadeQuarta\\bosses-eldenring\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\isaac\\.nuget\\packages\\",
-        "outputPath": "C:\\_ws\\202501\\AtividadeQuarta\\bosses-eldenring\\Backend\\obj\\",
+        "projectPath": "C:\\_ws\\eldenring_trabalho\\bosses-eldenring\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\henry\\.nuget\\packages\\",
+        "outputPath": "C:\\_ws\\eldenring_trabalho\\bosses-eldenring\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\isaac\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\henry\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -81,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
