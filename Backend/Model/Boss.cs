@@ -1,4 +1,7 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Backend.Model
 {
@@ -18,11 +21,35 @@ namespace Backend.Model
         public int Stance { get; set; }
         [Required(ErrorMessage = "O campo {parryable} é obrigatório.")]
         public bool Parryable { get; set; }
+        [JsonIgnore]
         [Required(ErrorMessage = "O campo {damageType} é obrigatório.")]
-        public List<string> DamageType { get; set; } = new List<string>();
-        public List<string> Inflicts { get; set; } = new List<string>();
+        public string DamageTypeStr { get; set; } = "[]";
+        [JsonIgnore]
+        public string InflictsStr { get; set; } = "[]";
+        [JsonIgnore]
         [Required(ErrorMessage = "O campo {drops} é obrigatório.")]
-        public List<string> Drops { get; set; } = new List<string>();
+        public string DropsStr { get; set; } = "[]";
         public bool Active {get; set;}
+
+        [NotMapped]
+        public List<string> DamageType
+        {
+            get => JsonSerializer.Deserialize<List<string>>(DamageTypeStr) ?? new List<string>();
+            set => DamageTypeStr = JsonSerializer.Serialize(value);
+        }
+
+        [NotMapped]
+        public List<string> Inflicts
+        {
+            get => JsonSerializer.Deserialize<List<string>>(InflictsStr) ?? new List<string>();
+            set => InflictsStr = JsonSerializer.Serialize(value);
+        }
+
+        [NotMapped]
+        public List<string> Drops
+        {
+            get => JsonSerializer.Deserialize<List<string>>(DropsStr) ?? new List<string>();
+            set => DropsStr = JsonSerializer.Serialize(value);
+        }
     }
 }
