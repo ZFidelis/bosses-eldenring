@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -24,6 +25,17 @@ export default function Home() {
             Save and see your changes instantly.
           </li>
         </ol>
+
+        <div className="p-8">
+      <h1 className="text-3xl font-bold">Welcome to Bosses Elden Ring</h1>
+      <p className="mt-4">Explore the legendary weapons of Elden Ring.</p>
+      <Link
+        href="weapons"
+        className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+      >
+        View Weapons
+      </Link>
+    </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a

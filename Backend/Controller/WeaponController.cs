@@ -71,6 +71,28 @@ namespace Backend.Controller
         }
     }
 
+[HttpGet("type/{type}")]
+public async Task<ActionResult<IEnumerable<Weapon>>> GetWeaponsByType(string type)
+{
+    try
+    {
+        var weapons = await _appDbContext.tb_weapons
+            .Where(w => w.Type.ToLower() == type.ToLower())
+            .ToListAsync();
+
+        if (weapons == null || !weapons.Any())
+        {
+            return NotFound("Nenhuma arma encontrada para o tipo especificado");
+        }
+
+        return Ok(weapons);
+    }
+    catch (Exception ex)
+    {
+        return StatusCode(500, ex.Message);
+    }
+}
+
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateWeapon(int id, [FromBody] Weapon weapon)
     {
