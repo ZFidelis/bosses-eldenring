@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 var apiUrl = "http://localhost:5243";
@@ -60,7 +61,15 @@ function BossesTable() {
                 ) : (
                     bosses.map((boss, i) => (
                         <tr key={i}>
-                            <td className="border border-white px-4 py-4 h-10">{boss.name}</td>
+                            <td className="border border-white px-4 py-4 h-10">
+                                <Link
+                                    href={`/bosses/${boss.id}`}
+                                    className="text-gray-400 hover:underline"
+                                >
+                                    {boss.name}
+                                </Link>
+
+                            </td>
                             <td className="border border-white px-4 py-4 h-10">{boss.location}</td>
                         </tr>
                     ))
