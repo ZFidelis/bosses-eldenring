@@ -13,6 +13,8 @@ namespace Backend.Model
         public string? Name { get; set; }
         [Required(ErrorMessage = "O campo {description} é obrigatório.")]
         public string? Description { get; set; }
+        [Required(ErrorMessage = "O campo {location} é obrigatório.")]
+        public string? Location { get; set; }
         [Required(ErrorMessage = "O campo {health} é obrigatório.")]
         public int Health { get; set; }
         [Required(ErrorMessage = "O campo {defense} é obrigatório.")]

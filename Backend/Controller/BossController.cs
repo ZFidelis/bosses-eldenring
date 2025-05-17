@@ -6,7 +6,7 @@ using Backend.Data;
 namespace Backend.Controller
 {
     [ApiController]
-    [Route("controller")]
+    [Route("boss")]
     public class BossController : ControllerBase
     {
         private readonly AppDbContext _appDbContext;
