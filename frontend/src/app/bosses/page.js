@@ -1,13 +1,13 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 var apiUrl = "http://localhost:5243";
 
 export default function Bosses() {
   return (
     <div className="min-h-screen bg-zinc-900 flex items-center justify-center p-10">
-      <div className="bg-zinc-950 border-2 border-white p-10 w-[900px] max-w-full rounded">
+      <div className="bg-zinc-950 border-2 border-white p-10 w-[1400px] max-w-full rounded">
         <h1 className="text-white text-4xl font-bold mb-4">Bosses Elden Ring</h1>
         <hr className="border-white mb-6" />
         <BossesIntroduction />
@@ -33,57 +33,42 @@ function BossesIntroduction() {
 }
 
 function BossesTable() {
-    // const [bosses, setBosses] = useState({
-    //     name: "", 
-    //     location: ""
-    // })
     const [bosses, setBosses] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`${apiUrl}/boss`)
-        .then((res) => res.json())
-        .then((data) => {
-            setBosses(data);
-            setLoading(false);
-        })
-        .catch(() => setLoading(false));
+        getBosses()
+            .then((data) => setBosses(data))
+            .catch(() => setBosses([]));
     }, []);
 
-    return(
+    return (
         <>
-        <table className="border border-white min-w-[260px] bg-zinc-900 text-white text-base">
+        <table className="border border-white min-w-[500px] bg-zinc-900 text-white text-base">
             <thead>
                 <tr>
-                <th className="border border-white px-4 py-2 font-bold bg-zinc-900">Name</th>
-                <th className="border border-white px-4 py-2 font-bold bg-zinc-900">Location</th>
+                    <th className="border border-white px-4 py-2 font-bold bg-zinc-900">Name</th>
+                    <th className="border border-white px-4 py-2 font-bold bg-zinc-900">Location</th>
                 </tr>
             </thead>
             <tbody>
-                {loading ? (
-                <tr>
-                    <td colSpan={2} className="border border-white px-4 py-4 h-10 text-center">
-                    Loading...
-                    </td>
-                </tr>
-                ) : bosses.length === 0 ? (
-                <tr>
-                    <td colSpan={2} className="border border-white px-4 py-4 h-10 text-center">
-                    No bosses found.
-                    </td>
-                </tr>
-                ) : (
-                bosses.map((boss, i) => (
-                    <tr key={i}>
-                    <td className="border border-white px-4 py-4 h-10">{boss.name}</td>
-                    <td className="border border-white px-4 py-4 h-10">{boss.location}</td>
+                {bosses.length === 0 ? (
+                    <tr>
+                        <td colSpan={2} className="border border-white px-4 py-4 h-10 text-center">
+                            No bosses found.
+                        </td>
                     </tr>
-                ))
+                ) : (
+                    bosses.map((boss, i) => (
+                        <tr key={i}>
+                            <td className="border border-white px-4 py-4 h-10">{boss.name}</td>
+                            <td className="border border-white px-4 py-4 h-10">{boss.location}</td>
+                        </tr>
+                    ))
                 )}
             </tbody>
         </table>
         </>
-    )
+    );
 }
 
 function BossesVideo() {
@@ -107,10 +92,11 @@ function BossesVideo() {
 }
 
 async function getBosses() {
-    const response = await fetch(`${apiUrl}/usuario/email/${email}`, {
+    const response = await fetch(`${apiUrl}/boss`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
             },
         });
+    return response.json();
 }
