@@ -30,13 +30,15 @@ export default function WeaponsByTypePage() {
         {loading ? (
           <p className="text-white text-center">Loading...</p>
         ) : weapons.length === 0 ? (
-          <p className="text-white text-center">No weapons found for this type.</p>
+          <p className="text-white text-center">
+            No weapons found for this type.
+          </p>
         ) : (
           <ul className="list-disc list-inside text-white space-y-4 text-xl">
             {weapons.map((weapon, i) => (
               <li key={i}>
                 <a
-                  href={`/weapons/${weapon.type}`}
+                  href={`/weapons/${type}/${weapon.id}`}
                   className="text-blue-400 hover:underline"
                 >
                   {weapon.name}
