@@ -20,7 +20,7 @@ export default function BossPage({ params }) {
 return (
   <div className="min-h-screen bg-gradient-to-br from-zinc-900 to-zinc-800 flex items-center justify-center p-10">
     <div className="bg-zinc-950 border border-zinc-700 shadow-2xl p-10 w-[1000px] max-w-full rounded-2xl transition-all duration-300">
-      <h1 className="text-[#bfa046] text-4xl font-extrabold mb-4 drop-shadow-lg">{bossTitle} | Elden Ring</h1>
+      <h1 className="text-[#bfa046] text-4xl font-extrabold mb-4 drop-shadow-lg">{bossTitle} | Elden Ring Wiki</h1>
       <hr className="border-zinc-700 mb-6" />
       <p className="text-zinc-200 mb-6 text-lg">
         <span className="font-semibold">{boss.name}</span> is an Enemy Boss in Elden Ring. Its found in <b className="text-[#bfa046]">{boss.location}</b>
