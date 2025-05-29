@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const apiUrl = "http://localhost:5243";
 
 export default function EditBossPage({ params }) {
-  const { id } = params;
+  const sParams = use(params);
+  const { id } = sParams;
   const router = useRouter();
   const [boss, setBoss] = useState(null);
   const [loading, setLoading] = useState(true);
