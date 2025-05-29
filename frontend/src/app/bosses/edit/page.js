@@ -36,10 +36,18 @@ export default function BossesListPage() {
       <div className="bg-zinc-950 border border-zinc-700 shadow-2xl p-10 w-[1200px] max-w-full rounded-2xl transition-all duration-300">
         <h1 className="text-[#bfa046] text-4xl font-extrabold mb-4 drop-shadow-lg">CRUD Bosses | Elden Ring Wiki</h1>
         <hr className="border-zinc-700 mb-6" />
+        <div className="flex mb-6">
+          <Link
+            href="/bosses/edit/create"
+            className="bg-[#bfa046] text-zinc-900 px-5 py-2 rounded font-bold hover:bg-[#d6b35c] transition shadow"
+          >New Boss
+          </Link>
+        </div>
         <div className="overflow-x-auto">
           <table className="border border-zinc-700 min-w-[800px] bg-zinc-900/80 text-zinc-100 text-base rounded-xl shadow overflow-hidden">
             <thead>
               <tr>
+                <th className="border-b border-zinc-700 px-4 py-3 font-bold bg-zinc-900/80 text-[#bfa046] text-lg">Id</th>
                 <th className="border-b border-zinc-700 px-4 py-3 font-bold bg-zinc-900/80 text-[#bfa046] text-lg">Name</th>
                 <th className="border-b border-zinc-700 px-4 py-3 font-bold bg-zinc-900/80 text-[#bfa046] text-lg">Location</th>
                 <th className="border-b border-zinc-700 px-4 py-3 font-bold bg-zinc-900/80 text-[#bfa046] text-lg">Health</th>
@@ -59,6 +67,7 @@ export default function BossesListPage() {
               ) : (
                 bosses.map((boss) => (
                   <tr key={boss.id} className="hover:bg-zinc-800/60 transition">
+                    <td className="px-4 py-4">{boss.id}</td>
                     <td className="px-4 py-4">{boss.name}</td>
                     <td className="px-4 py-4">{boss.location}</td>
                     <td className="px-4 py-4">{boss.health}</td>
