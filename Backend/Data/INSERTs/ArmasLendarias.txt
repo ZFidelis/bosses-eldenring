@@ -1,0 +1,12 @@
+INSERT INTO tb_weapons (
+    Id, Name, Description, AttackStr, GuardStr, ScallingStr, RequiresStr, Type, DamageTypeStr, Skill, FpCost, Weight, InflictsStr, Active
+) VALUES
+(111, 'Devourer''s Scepter', 'A scepter that devours all.', '["120 Physical"]', '["60"]', '["D"]', '["Str 24", "Fth 20"]', 'Colossal Weapon', '["Physical"]', 'Devourer of Worlds', '25', 11.0, '[]', 1),
+(222, 'Crafted Blade Greatsword', 'A greatsword with a crafted blade.', '["142 Physical"]', '["65"]', '["C"]', '["Str 40", "Dex 16"]', 'Colossal Sword', '["Physical"]', 'Oath of Vengeance', '20', 12.0, '[]', 1),
+(333, 'Sword of Night and Flame', 'A legendary sword with fire and magic.', '["100 Physical", "80 Magic", "80 Fire"]', '["50"]', '["D", "D"]', '["Str 12", "Dex 12", "Int 24", "Fth 24"]', 'Straight Sword', '["Physical", "Magic", "Fire"]', 'Night-and-Flame Stance', '19', 4.0, '["Burn"]', 1),
+(444, 'Ruins Greatsword', 'A colossal sword forged from ruins.', '["124 Physical", "50 Magic"]', '["60"]', '["B"]', '["Str 50", "Int 16"]', 'Colossal Sword', '["Physical", "Magic"]', 'Wave of Destruction', '21', 10.0, '[]', 1),
+(555, 'Marais Executioner''s Sword', 'A sword used for executions.', '["94 Physical", "61 Magic"]', '["55"]', '["D", "C"]', '["Str 24", "Arc 23"]', 'Greatsword', '["Physical", "Magic"]', 'Eochaid''s Dancing Blade', '23', 11.5, '[]', 1),
+(666, 'Dark Moon Greatsword', 'A sword bathed in dark moonlight.', '["82 Physical", "98 Magic"]', '["40"]', '["D", "B"]', '["Str 16", "Dex 11", "Int 38"]', 'Greatsword', '["Physical", "Magic"]', 'Moonlight Greatsword', '32', 10.0, '["Frostbite"]', 1),
+(777, 'Bolt of Gransax', 'A spear that strikes with red lightning.', '["98 Physical", "64 Lightning"]', '["45"]', '["D", "C"]', '["Str 20", "Dex 40"]', 'Spear', '["Physical", "Lightning"]', 'Ancient Lightning Spear', '20', 8.0, '[]', 1),
+(888, 'Eclipse Shotel', 'A curved sword that brings eclipse.', '["77 Physical", "89 Holy"]', '["38"]', '["D", "C"]', '["Str 10", "Dex 25", "Fth 30"]', 'Curved Sword', '["Physical", "Holy"]', 'Death Flare', '17', 6.5, '[]', 1),
+(999, 'Golden Order Greatsword', 'A sword blessed by the Golden Order.', '["86 Physical", "103 Holy"]', '["42"]', '["D", "C"]', '["Str 16", "Dex 21", "Fth 28"]', 'Greatsword', '["Physical", "Holy"]', 'Establish Order', '23', 10.0, '[]', 1);

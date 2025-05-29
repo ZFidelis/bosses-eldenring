@@ -3,10 +3,10 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-between bg-[#18181b] text-white font-sans">
-      <header
+      <div
         className="w-full flex flex-col items-center py-10 bg-gray-950/80 shadow-lg relative"
         style={{
-          backgroundImage: "url(/miniminilogo.png)",
+          backgroundImage: "url(/fundo.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -20,7 +20,7 @@ export default function Home() {
           about legendary bosses and unique weapons, the secrets of the game
           universe.
         </p>
-      </header>
+      </div>
       <main className="flex-1 w-full flex flex-col items-center justify-center gap-12 py-12">
         <div className="flex flex-col sm:flex-row gap-8">
           <Link
@@ -33,7 +33,7 @@ export default function Home() {
             }}
           >
             <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-all" />
-            <div className="flex-1" /> {/* Spacer to push content down */}
+            <div className="flex-1" /> 
             <span className="text-gray-100 mb-2 text-center font-bold relative z-10">
               See all bosses, their abilities, weaknesses, and rewards.
             </span>
@@ -67,30 +67,6 @@ export default function Home() {
           </p>
         </section>
       </main>
-      <footer className="w-full flex flex-col sm:flex-row items-center justify-between gap-4 py-6 px-8 bg-black border-t border-gray-800 mt-8">
-        <span className="text-gray-400">
-          © {new Date().getFullYear()} Elden Ring Bosses and Weapons. Some
-          rights reserved.
-        </span>
-        <div className="flex gap-4">
-          <a
-            href="https://nextjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline text-gray-300"
-          >
-            Powered by Next.js
-          </a>
-          <a
-            href="https://vercel.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline text-gray-300"
-          >
-            Deploy on Vercel
-          </a>
-        </div>
-      </footer>
     </div>
   );
 }
