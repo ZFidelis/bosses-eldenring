@@ -19,5 +19,40 @@ Esta API funciona como uma wiki, mostrando dados dos chefes do jogo, como locali
 - **Framework:** ASP.NET Core
 - **ORM:** Entity Framework Core
 - **Banco de Dados:** MySQL
-- **Front-end:** JavaScript
+- **Front-end:** JavaScript + Next
 - **Versionamento:** Git + GitHub
+
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos
+- .Net SDK 8.0+
+- MySQL
+- Git
+- Node
+
+### Passos
+
+```bash
+#1. Clone o repositório
+git clone https://github.com/ZFidelis/bosses-eldenring.git
+
+#2. Acesse a pasta do projeto
+cd ./bosses-eldenring
+
+#3. Acesse a pasta do backend
+cd ./Backend
+
+#4. Build o projeto
+dotnet build
+
+#5. Execute o backend
+dotnet run
+
+#6. Em outro terminal, acesse a pasta do frontend
+cd ./bosses-eldenring/frontend
+
+#7. Instale/configure o next
+npm install
+
+#8. Execute o frontend
+npm run dev
